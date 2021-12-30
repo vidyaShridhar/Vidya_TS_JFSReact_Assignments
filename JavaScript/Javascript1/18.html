@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function translatePigLatin(str) {
+  var newStr = str;
+  // if string starts with vowel make 'way' adjustment
+  if (newStr.slice(0,1).match(/[aeiouAEIOU]/)) {
+    newStr = newStr + "way";
+  }
+  // else, iterate through first consonents to find end of cluster
+  // move consonant cluster to end, and add 'ay' adjustment
+  else {
+    var moveLetters = "";
+    while (newStr.slice(0,1).match(/[^aeiouAEIOU]/)) {
+      moveLetters += newStr.slice(0,1);
+      newStr = newStr.slice(1, newStr.length);
+    }
+    newStr = newStr + moveLetters + "ay";
+  }
+  document.write(newStr);
+}
+var str="brown";
+translatePigLatin(str)
+    </script>
+</body>
+</html>

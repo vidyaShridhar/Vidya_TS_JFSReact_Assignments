@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+
+<script>
+const rectangle = {
+  
+  height: 50,
+  width: 70,
+  getArea : function() {
+    return (this.height * this.width);
+  }
+};
+
+document.getElementById("demo").innerHTML = "The height of the rectangle is "+rectangle.height + " and the width is " + rectangle.width+" and the area is "+rectangle.getArea();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+
+<script>
+// Constructor function for rectangle objects
+function rectangle(height, width) {
+  this.heigh = height;
+  this.width = width;
+
+}
+
+// Create a rectangle object
+const area1 = new rectangle(4,5);
+area1.width=50;
+area1.getArea=function(){
+    return this.heigh*this.width;
+};
+
+// Display 
+document.getElementById("demo").innerHTML =
+"The Area is " + area1.getArea() + "."; 
+</script>
+
+</body>
+</html>

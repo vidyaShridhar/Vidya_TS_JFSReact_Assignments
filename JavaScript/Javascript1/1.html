@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to demonstrate the Program.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var sum=0;
+  var n = prompt("Please enter the value of n");
+  if (n != null) {
+      for(var i=0;i<=n;i++){
+          sum=sum+i;
+      }
+    document.getElementById("demo").innerHTML =
+    "The total sum is " + sum;
+  }
+}
+</script>
+
+</body>
+</html>

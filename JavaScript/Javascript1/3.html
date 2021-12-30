@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click the button to demonstrate the Program.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var result;
+  var n = prompt("Please enter the value of n");
+  if (n != null) {
+     if(n%2==0){
+        result="even";
+    }
+    else
+    result="odd";
+      
+    document.getElementById("demo").innerHTML =
+    "It is an " + result+" number.";
+  }
+}
+</script>
+</body>
+</html>
